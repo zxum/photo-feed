@@ -1,0 +1,6 @@
+<% @photos.each do |photo| %>
+<% photoid = photo.id %>
+<% photoserver = photo.server %>
+<% photosecret = photo.secret %>
+<%= image_tag("https://live.staticflickr.com/#{photoserver}/#{photoid}_#{photosecret}.jpg")%>
+<% end %>

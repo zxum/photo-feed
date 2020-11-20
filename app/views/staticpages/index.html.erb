@@ -1,12 +1,20 @@
-<%= form_tag(:staticpages, method: 'get') do %>
-  <%= label_tag(:username, "Search for:") %>
-  <%= text_field_tag(:username) %>
-  <%= submit_tag("Search") %>
-<% end %>
+  <div class="columns is-centered">
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-1 has-text-white has-text-centered ">Look for a Flickr Gallery</h1>
+        </div>
+      </div>
+    </section>
+  </div>
 
-<% @photos.each do |photo| %>
-<% photoid = photo.id %>
-<% photoserver = photo.server %>
-<% photosecret = photo.secret %>
-<%= image_tag "https://live.staticflickr.com/#{photoserver}/#{photoid}_#{photosecret}.jpg"%>
-<% end %>
+  <div class="columns is-centered">
+    <div class="column is-5">
+    <%= render 'form'%>
+    </div>
+  </div>
+  <div class="columns is-centered">
+    <div class="column photos">
+    <%= render 'photos'%>
+    </div>
+  </div>

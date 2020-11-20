@@ -12,7 +12,7 @@ class StaticpagesController < ApplicationController
     else 
       @photos = flickr.people.getPublicPhotos :user_id => userid
     end
-    
+
   end
 
   def show

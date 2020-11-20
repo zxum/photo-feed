@@ -1,0 +1,84 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+$darkpink: hsl(332, 94%, 81%);
+$mediumpink: hsl(328, 88%, 86%);
+$lightpink: hsl(339, 92%, 90%);
+$mint: hsl(186, 54%, 83%);
+@import url('https://fonts.googleapis.com/css2?family=League+Script&family=Montserrat:wght@100;400&display=swap');
+@import "bulma";
+html {
+    height: 100%;
+    background: rgb(252, 163, 204);
+    background: linear-gradient(170deg, rgba(252, 163, 204, 1) 0%, rgba(251, 190, 223, 1) 25%, rgba(253, 207, 223, 1) 50%, rgba(114, 240, 255, 1) 100%);
+    background-attachment: fixed;
+}
+
+.navbar-color {
+    background: transparent;
+}
+
+h1.title.is-1 {
+    font-family: 'League Script', cursive;
+}
+
+.field-body {
+    display: flex;
+}
+
+.input {
+    border: 0px solid transparent;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+.input:active,
+.input:focus,
+.input:hover {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.is-line {
+    background: transparent;
+    border-bottom: 5px solid white;
+}
+
+.is-line:active,
+.is-line:focus {
+    border-bottom: 5px solid $darkpink
+}
+
+.is-line:hover {
+    border-bottom: 5px solid $mint;
+}
+
+.button.is-custom {
+    border-color: transparent;
+    color: $darkpink;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img {
+    border-radius: 5px;
+    display: flex;
+    margin: 5px;
+}
