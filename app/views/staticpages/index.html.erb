@@ -1,0 +1,12 @@
+<%= form_tag(:staticpages, method: 'get') do %>
+  <%= label_tag(:username, "Search for:") %>
+  <%= text_field_tag(:username) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<% @photos.each do |photo| %>
+<% photoid = photo.id %>
+<% photoserver = photo.server %>
+<% photosecret = photo.secret %>
+<%= image_tag "https://live.staticflickr.com/#{photoserver}/#{photoid}_#{photosecret}.jpg"%>
+<% end %>
